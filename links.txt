@@ -8,5 +8,20 @@ WebEx related links
 
 links
 =====
+Test a WebEx meeting on your device.
+Then start hosting your own meetings - free!
+Take a minute and try joining a meeting from this system.  Just enter the
+information below to get started.
+Java is not working.
+To have the best experience joining meetings, Java must be installed on your
+computer and enabled in your browser and the Java Control Panel.  Install
+and enable Java, restart your browser if needed, and then join the meeting
+again.
+https://www.webex.com/test-meeting.html
+
+
+Use WebEx with Linux
+http://www.linuxintro.org/wiki/Use_WebEx_with_Linux
+
 WebEx System Requirements (WBS30)
 https://help.webex.com/docs/DOC-4748
