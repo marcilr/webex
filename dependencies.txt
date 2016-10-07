@@ -1,0 +1,28 @@
+dependencies.txt
+Created Fri Oct  7 09:37:37 AKDT 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Dependencies
+
+Processor:  Intel or AMD x86
+JavaScript: JavaScript and cookies enabled
+Other:      Java 6, libstdc++ 6.0, GNOME/KDE windowing system
+
+covellite:~$  dpkg -l | grep libstdc
+ii  libstdc++-4.9-dev:amd64   4.9.2-10   amd64
+    GNU Standard C++ Library v3 (development files)
+ii  libstdc++6:amd64          4.9.2-10   amd64
+    GNU Standard C++ Library v3
+covellite:~$ 
+
+
+Browser:    Latest Firefox
+
+--help.webex.com/docs/DOC-4748
+
+
+links
+=====
+WebEx System Requirements (WBS30)
+https://help.webex.com/docs/DOC-4748
