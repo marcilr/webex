@@ -1,0 +1,34 @@
+chrome.txt
+Created Thu Nov  3 13:47:20 AKDT 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Chrome WebEx plugin
+
+
+Chrome plugins:
+  ... > More Tools > Extensions
+
+  Have Web plugin installed
+  on GCI Network Services, OSS covellite workstation
+    Cisco WebEx Extension 1.0.1
+    Join WebEx meeting using Google Chrome
+    x Enabled
+
+    Version: 1.0.1
+    Updated: October 31, 2016
+    
+    Cisco WebEx web and video conferencing is an easy, cost-effective way to
+    exchange ideas and information online with anyone, anywhere on any mobile
+    device or video system.  Accelerate decision-making, keep projects on
+    track, and collaborate in real time with integrated audio, video, and
+    content sharing, all in one meeting.  Enhance engagement with a lifelike
+    video experience, which rapidly builds relationships and trust, just like
+    you would in person.  Make connecting simple for smoother meetings so
+    users can invite others to easily join with their own video system.  From
+    the proven industry leader in web and video conferencing, rely on secure,
+    scalable WebEx meetings from the global Cisco Collaboration Cloud.
+    -- Google Chrome v52.0.2743.82 (64-bit)
+       ... > More Tools > Extensions
+
+
