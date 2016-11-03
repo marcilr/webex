@@ -8,6 +8,9 @@ WebEx related links
 
 links
 =====
+Joining a WebEx Meeting on Chrome and Firefox FAQ
+https://support.webex.com/webex/meetings/en_US/chrome-firefox-join-faq.htm
+
 Test a WebEx meeting on your device.
 Then start hosting your own meetings - free!
 Take a minute and try joining a meeting from this system.  Just enter the
