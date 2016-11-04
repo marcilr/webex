@@ -1,0 +1,50 @@
+share-screen.txt
+Created Fri Nov  4 08:46:15 AKDT 2016
+Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Share content in your WebEx meeting
+
+1. To share content in WebEx go to :
+  click More at bottom of Share File where ... is
+  click Share My Desktop at top of popup
+
+2. To stop sharing in WebEx go to:
+  select 'You are sharing your desktop' tab at top
+  click Stop Sharing
+
+3. To share a file, like word document in WebEx
+  click on Share Desktop icon
+
+under Share File (Including Video):
+  click From My Computer...
+  browse and select word document or file to share  
+
+WebEx Meetings plans allow you to screenshare with the people in your meeting so
+you can all see the same thing at the same time, and talk about it or work on it
+together.
+
+
+o View what's being screen-shared in full-screen.
+
+o Or see each other's video feeds right next to what you're screen sharing.
+
+o Edit or markup the file you're sharing.
+
+o Or create together from scratch on a shared whiteboard.
+
+Share your screen with your colleagues and work together instantly, no matter
+where you are. Explore ideas and move the work ahead.
+
+--www.webex.com/features/screen-share.html
+
+
+Links
+=====
+Share content in your WebEx meeting
+Has video (1m 26s) showing how to share content
+https://www.webex.com/how-to/index.html#how-to-tab-1%233791836778001
+
+Screen share - free.
+With WebEx Meetings.
+https://www.webex.com/features/screen-share.html
