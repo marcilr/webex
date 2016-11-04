@@ -10,6 +10,10 @@ The goal is to get WebEx running natively on the penguin.  In this case my
 covellite debian jessie 8.6 amd64 GCI Network Services, OSS workstation.
 
 
+Need help? Call 1 866 229 3239 and choose Option 1, or visit support.webex.com
+--Test a WebEx meeting on your device.
+  https://www.webex.com/test-meeting.html
+
 Unable to get Chrome, Chromium, Slimjet, or Firefox Java and NPAPI
 working.
 
