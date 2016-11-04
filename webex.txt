@@ -5,3 +5,426 @@ Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
 
 WebEx
 
+
+The goal is to get WebEx running natively on the penguin.  In this case my
+covellite debian jessie 8.6 amd64 GCI Network Services, OSS workstation.
+
+
+Unable to get Chrome, Chromium, Slimjet, or Firefox Java and NPAPI
+working.
+
+1. Configure TLS:
+  In Internet Explorer:
+  Tools > Internet options > Advanced
+  x Use TLS 1.0
+  x Use TLS 1.1
+  x Use TLS 1.2
+  click Apply
+  click OK
+
+2. Run WebEx test:
+open https://www.webex.com/test-meeting.html
+Name:          Ray
+Email Address: rmarcil@gci.com
+
+click Test a Meeting
+
+3. The above opens "Install the Cisco WebEx add-on"
+
+This website wants to install the following add-on: 'ieatgpc1.cab'
+from 'Cisco WebEx LLC'.
+
+click Install
+
+At Do you want to allow the following program to make changes to this 
+computer?
+  Program nsme:       [1]ieatgpc[1].cab
+  Verified publisher: Cisco WebEx LLC
+  File origin:        Downloaded form the Internet
+  click Yes
+
+watch Starting WebEx...
+watch Join Meerting Test...
+
+At Host Not In Meeting
+Because your are the first person to join the meeting,
+you are the current presenter.
+
+click OK
+
+
+
+
+Slimjet Web Browser
+===================
+Install old slimjet v10 with Java and NPAPI support:
+
+
+"Support of Java and NPAPI will be discontinued in Slimjet 11
+Due to the efforts required to continue support of Java and NPAPI, and
+considering the small percentage of users who actually need this, we plan to
+discontinue support of Java and NPAPI in Slimjet 11 (based on Chromium 51)."
+--Slimjet Developer's Blog
+  http://www.slimjet.com/blog/support-of-java-and-npapi-will-be-discontinued-in-slimjet-11/
+
+
+"Unfortunately, we only started to archive old versions of Chrome since Chrome  
+48.  Chrome dropped support for Java, silverlight and other NPAPI plugins in 
+Chrome 45.  If you are looking for an old version of Chrome with support of 
+Java, silverlight or other NPAPI plugins, we'd recommend Slimjet Web Browser, 
+which is based on Chromium and retains support of Java, silverlight and other 
+NPAPI plugins."
+
+1. Download Slimjet Web Browser 64bit Deb Package(.deb);
+
+On Slimjet Web Browser page (http://www.slimjet.com/en/dlpage.php)
+  click 64bit Deb Package(.deb) link
+
+At This type of file can hamr your computer.  Do you want to keep
+slimjet_amd64.deb
+
+click KEEP
+
+Check md5sum of deb:
+$ md5sum slimjet_amd64.deb
+4e6c630ae03badadd8b32b45792901d1  slimjet_amd64.deb
+$
+
+Verifies against value on website.
+
+2. Install slimjet_amd64.deb package:
+# dpkg -i slimjet_amd64.deb
+Selecting previously unselected package slimjet.
+(Reading database ... 408666 files and directories currently installed.)
+Preparing to unpack slimjet_amd64.deb ...
+Unpacking slimjet (12.0.6.0) ...
+Unpacking slimjet (12.0.6.0) ...
+Setting up slimjet (12.0.6.0) ...
+Processing triggers for menu (2.1.47) ...
+Processing triggers for desktop-file-utils (0.22-1) ...
+Processing triggers for gnome-menus (3.13.3-6) ...
+Processing triggers for mime-support (3.58) ...
+Processing triggers for man-db (2.7.0.2-5) ...
+#
+
+Create simlink to slimjet wrapper script for execution:
+$ ln -s /opt/slimjet/flashpeak-slimjet /home/marcilr/bin/slimjet
+
+3. Install Cisco WebEx in Slimjet Web Browser:
+i. Download the archive: Cisco_WebEx_Extension.crx.zip (see link below).[1]
+
+$ wget https://help.webex.com/servlet/JiveServlet/downloadBody/\
+8412-102-1-27331/Cisco_WebEx_Extension.crx.zip
+
+ii. Locate the downloaded zip file and open it. Save the WebEx extension file
+   Cisco_WebEx_Extension.crx to your desktop or other convenient location.
+
+$ unzip Cisco_WebEx_Extension.crx.zip
+Archive:  Cisco_WebEx_Extension.crx.zip
+  inflating: Cisco_WebEx_Extension.crx
+$
+
+iii. Run slimjet via the flashpeak-slimjet wrapper script:
+$ /opt/slimjet/flashpeak-slimjet 
+
+iv. Open a new tab in slimjet and type "chrome://extensions"
+in the Address Bar and press Enter.
+
+v. Ignore "Boo... You have no extensions :-( Want to browse the
+Slimjet Web Store instead?"
+
+drag the Cisco_WebEx_Extension.crx to Extension tab
+
+watch Drop to install popup
+
+vi. At Add "Cisco Web Extension"?
+It can:
+  o Read and change all your data on the websites you visit
+  o Communicate with cooperating native applicatioons
+
+click Add extension
+
+vii. Under slimjet://extensions verify:
+Cisco WebEx Extension 1.0.1
+Join WebEx meetings usingg Google Chrome
+
+Very good.
+
+viii. Test WebEx in Slimjet:
+open https://www.webex.com/test-meeting.html
+
+Name:          Ray
+Email address: rmarcil@gci.com
+
+click Test a Meeting
+
+Still get:
+  Java is not working.
+ 
+  To have the best experience joining meetings, Java must be installed on your
+  computer and enabled in your browser and the Java Control Panel.  Install
+  and enable Java, restart your browser if needed, and then join the meeting
+  again.
+
+
+
+Manually Install Cisco WebEx for Google Chrome   <===
+==============================================
+Document created by Cisco Documentation Team on Jun 7, 2016
+Last modified by Brian Porter on Jun 14, 2016
+
+This document contains instructions on how to manually install the Cisco WebEx
+meeting extension in Google Chrome.
+
+To manually install the WebEx meeting extension in Chrome:
+1. Download the archive: Cisco_WebEx_Extension.crx.zip (see link below).[1]
+
+$ wget https://help.webex.com/servlet/JiveServlet/downloadBody/\
+8412-102-1-27331/Cisco_WebEx_Extension.crx.zip
+
+2. Locate the downloaded zip file and open it. Save the WebEx extension file
+   Cisco_WebEx_Extension.crx to your desktop or other convenient location.
+
+$ unzip Cisco_WebEx_Extension.crx.zip
+Archive:  Cisco_WebEx_Extension.crx.zip
+  inflating: Cisco_WebEx_Extension.crx  
+$
+
+3. Open a new tab in Chrome and type "chrome://extensions" in the Address Bar
+   and press Enter.
+
+4. Drag the extension file Cisco_WebEx_Extension.crx into the Extensions tab
+   in Chrome.
+
+Drag Cisco_WebEx_Extension.crx to Extensions tab in
+chrome v52.0.2743.82 (64-bit) on covellite debian 8.6 amd64 GCI Network 
+Services, OSS workstation.
+
+At Extensions, apps, and themes can harm your computer. Are you sure want to
+continue?
+
+click CONTINUE
+
+Get Error:
+  At Apps, extensions, and user scripts cannot be added from this website
+  click OK
+
+  "Instead of opening the file, you have to: extract it (crx are zip files),
+  then visit chrome://extensions, enable developer mode, and load unpacked
+  extension.
+
+  The reason for this is: lots of people try to abuse chrome apps/extensions
+  to install nasty applications to your browser.  So Chrome tries to make it
+  impossible to automatically side-load these apps without you making sure
+  that is really what you want to do.
+  
+  So.. typical caveats of installing software apply when using this approach."
+
+Hence:
+  i.   Open a new tab in Chrome and type "chrome://extensions" in the
+       Address Bar
+
+  ii.  At Extensions
+       x Developer mode
+
+  iii. Drag Cisco_WebEx_Extension.crx into the Extensions tab
+       in Chrome.
+       watch Drop to install popup
+
+  iv.  In Extension see:
+       Cisco WebEx Extension 1.0.1
+       Join WebEx meetings using Google Chrome
+       ID: jlhmfgmfgeifomenelglieieghnjghma
+
+  v.   Test new extension at:
+       https://www.webex.com/test-meeting.html
+       Name:          Ray
+       Email Address: rmarcil@gci.com
+
+       click Test a Meeting
+
+       Arg... Still get java error.
+
+5. Select Add extension.
+
+Note: Your computer may still have to automatically download and install a
+Cisco WebEx add-on file when you first join a meeting.
+
+You can now join your meeting.
+--https://help.webex.com/docs/DOC-8177
+
+
+Google Chrome
+=============
+*Using WebEx on Chrome
+Because Chrome will be removing support for NPAPI, a new joining method using
+a Chrome extension has been provided for using WebEx starting with Chrome 38.
+When using WebEx for the first time on Chrome, users will be guided through a
+one-time process to add the extension and update the WebEx application.  After
+the first time, users can join without the extra steps.
+--Ex Meetings supports Windows, Mac, Linux Operating Systems.
+  https://www.webex.co.uk/support/support-system-requirements.html
+
+
+Chrome no longer supports NPAPI (technology required for Java applets)
+The Java plug-in for web browsers relies on the cross platform plugin
+architecture NPAPI, which has been supported by all major web browsers
+for over a decade.  Google's Chrome version 45 (scheduled for release
+in September 2015) drops support for NPAPI, impacting plugins for
+Silverlight, Java, Facebook Video and other similar NPAPI based
+plugins.
+--Java and Google Chrome Browser
+  https://java.com/en/download/faq/chrome.xml
+
+Google Chrome v52.0.2743.82 (64-bit) throws error:
+  Java is not working.
+ 
+  To have the best experience joining meetings, Java must be installed on your
+  computer and enabled in your browser and the Java Control Panel.  Install
+  and enable Java, restart your browser if needed, and then join the meeting
+  again.
+
+
+
+1. Install java (debian jessie 8.6 amd64):
+openjdk-7-doc - OpenJDK Development Kit (JDK) documentation
+openjdk-7-jdk - OpenJDK Development Kit (JDK)
+
+# aptitude install openjdk-7-doc
+# aptitude install openjdk-7-jdk
+
+$ dpkg -l | grep openjdk-7
+openjdk-7-doc
+openjdk-7-jdk
+openjdk-7-jre
+openjdk-7-jre-headless
+
+$ java -version
+java version "1.7.0_111"
+OpenJDK Runtime Environment (IcedTea 2.6.7) (7u111-2.6.7-1~deb8u1)
+OpenJDK 64-Bit Server VM (build 24.111-b01, mixed mode)
+$
+
+Looks good.
+
+
+2. Install Chrome plugin:
+
+Chrome plugins:
+  ... > More Tools > Extensions
+
+NOTE: Chrome no longer supports NPAPI (technology required for Java applets)
+      The Java plug-in for web browsers relies on the cross platform plugin
+      architecture NPAPI, which has been supported by all major web browsers
+      for over a decade.  Google's Chrome version 45 (scheduled for release
+      in September 2015) drops support for NPAPI, impacting plugins for
+      Silverlight, Java, Facebook Video and other similar NPAPI based
+      plugins.
+      --Java and Google Chrome Browser
+        https://java.com/en/download/faq/chrome.xml
+
+
+  Have Web plugin installed
+  on GCI Network Services, OSS covellite workstation
+    Cisco WebEx Extension 1.0.1
+    Join WebEx meeting using Google Chrome
+    x Enabled
+
+    Version: 1.0.1
+    Updated: October 31, 2016
+    
+    Cisco WebEx web and video conferencing is an easy, cost-effective way to
+    exchange ideas and information online with anyone, anywhere on any mobile
+    device or video system.  Accelerate decision-making, keep projects on
+    track, and collaborate in real time with integrated audio, video, and
+    content sharing, all in one meeting.  Enhance engagement with a lifelike
+    video experience, which rapidly builds relationships and trust, just like
+    you would in person.  Make connecting simple for smoother meetings so
+    users can invite others to easily join with their own video system.  From
+    the proven industry leader in web and video conferencing, rely on secure,
+    scalable WebEx meetings from the global Cisco Collaboration Cloud.
+    -- Google Chrome v52.0.2743.82 (64-bit)
+       ... > More Tools > Extensions
+
+
+Firefox ESR
+===========
+NOTE: WebEx plugin does not appear to be available got
+      Firefox v45.4.0
+
+Get version
+  click triple bar > question mark > About Firefox
+  v45.4.0 (GCI Network Services, covellite debian jessie 8.6 amd64
+
+
+
+Links
+=====
+[1] Cisco_WebEx_Extension.crx.zip   <===
+https://help.webex.com/servlet/JiveServlet/downloadBody/8412-102-1-27331/Cisco_WebEx_Extension.crx.zip
+
+All "google-chrome-stable" versions
+Latest install google-chrome-stable is 52.0.2743.82-1
+http://www.ubuntuupdates.org/pm/google-chrome-stable
+
+Apps, Extensions and scripts cannot be added from this website   <===
+Had details to load webex entension:
+i. chrome://extensions
+ii. enable developer mode
+iii. drag *.crx to Extensions tab
+http://stackoverflow.com/questions/23091526/apps-extensions-and-scripts-cannot-be-added-from-this-website
+
+Google Chrome Older Versions Download (Windows, Linux & Mac)
+Support of Java, Silverlight and NPAPI plugins
+"Unfortunately, we only started to archive old versions of Chrome since Chrome
+48.  Chrome dropped support for Java, silverlight and other NPAPI plugins in
+Chrome 45.  If you are looking for an old version of Chrome with support of
+Java, silverlight or other NPAPI plugins, we'd recommend Slimjet Web Browser,
+which is based on Chromium and retains support of Java, silverlight and other
+NPAPI plugins."
+http://www.slimjet.com/chrome/google-chrome-old-version.php
+
+Install older versions of google-chrome-stable, on ubuntu 14.10
+http://unix.stackexchange.com/questions/233185/install-older-versions-of-google-chrome-stable-on-ubuntu-14-10
+
+Joining a WebEx Meeting on Chrome and Firefox FAQ
+https://support.webex.com/webex/meetings/en_US/chrome-firefox-join-faq.htm#enable_plug-in
+
+Manually Install Cisco WebEx for Google Chrome                <===
+Document created by Cisco Documentation Team on Jun 7, 2016
+Last modified by Brian Porter on Jun 14, 2016
+https://help.webex.com/docs/DOC-8177
+
+Setting up WebEx on Ubuntu 14.04 (64 bits)
+References the latest java7 package / mozilla-java-plugin (java-1.7.0-openjdk-amd64)
+http://pedroalves-bi.blogspot.com/2014/05/setting-up-webex-on-ubuntu-1404-64-bits.html
+
+Slimjet Web Browser
+http://www.slimjet.com/
+
+Slimjet Web Browser Download
+http://www.slimjet.com/en/dlpage.php
+
+Slimjet Web Browser 64bit Deb Package(.deb)
+(48.64MB, 2016-10-22, MD5:4E6C630AE03BADADD8B32B45792901D1)
+NOTE: New version do not support java or NAPI
+http://www.slimjet.com/en/postdl.php?version=lnx64&type=deb
+
+Slimjet Web Browser older versions
+NOTE: Version v10 is the last with Java and NPAPI support
+http://www.slimjet.com/release/archive
+
+Slimjet Web Browser v10.0.9.0/
+Argh... Appears to only be windows releases.
+http://www.slimjet.com/release/archive/10.0.9.0/
+
+Test a WebEx meeting   <===
+https://www.webex.com/test-meeting.html
+
+WebEx System Requirements
+https://www.webex.co.uk/support/support-system-requirements.html
+
+Where to download the last Chrome version with Java (NPAPI) support?
+This only has links to windows version
+Last with Java (NPAPI) support appears to be v44 though.
+http://superuser.com/questions/988243/where-to-download-the-last-chrome-version-with-java-npapi-support
