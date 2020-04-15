@@ -6,6 +6,15 @@ Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
 WebEx
 
 
+
+Wed 15 Apr 2020 09:43:12 AM AKDT
+================================
+Still need to run webex on:
+  Debian 4.19.98-1 (2020-01-26) x86_64 GNU/Linux
+
+
+Fri Oct  7 09:32:59 AKDT 2016
+=============================
 The goal is to get WebEx running natively on the penguin.  In this case my
 covellite debian jessie 8.6 amd64 GCI Network Services, OSS workstation.
 
