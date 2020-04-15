@@ -3,14 +3,76 @@ Created Fri Oct  7 09:32:59 AKDT 2016
 Copyright (C) 2016 by Raymond E. Marcil <marcilr@gmail.com>
 
 
-WebEx
+Webex
 
+
+Username:     marcilr@gmail.com
+Webex site:   meetingsamer8.webex.com
+Credential:   The usual + A7 (created Wed, April 15, 2020)
+
+--Account create on Wed, April 15, 2020
 
 
 Wed 15 Apr 2020 09:43:12 AM AKDT
 ================================
 Still need to run webex on:
   Debian 4.19.98-1 (2020-01-26) x86_64 GNU/Linux
+
+
+1. Created Webex Meetings account.
+Signed up at:
+  https://globalpage-prod.webex.com/signin
+
+click Sign up
+
+Email address: marcilr@gmail.com
+click Sign Up
+
+At Let’s set up your Webex Meetings.
+Country/Region: United States (English)
+First name:     Raymond
+Last name:      Marcil
+click Continue
+
+Your new account is ready.
+We sent you an email with details on how to access your account.
+
+2. Check gmail for account details:
+Moved "Important: Your Cisco Webex account information" message
+to new Webex folder on gmail.
+
+Checking "Welcome to Cisco Webex Meetings" message:
+
+Hi Raymond Marcil,
+ 
+Welcome to Webex Meetings. Now you can meet and collaborate 
+anywhere, anytime, and on any mobile device or video system. 
+Maximize your productivity with the best in integrated audio, 
+video, and content sharing.
+ 
+Get started
+ 
+Create a password for your account so you can sign in to your 
+Webex site and to the Cisco Webex Meetings desktop app and 
+mobile app for a richer meeting experience.
+ 
+Username: marcilr@gmail.com
+ 
+Webex site: meetingsamer8.webex.com
+
+
+3. Set credential:
+Must contain:
+  At least 8 characters
+  At leasy 2 letters (a, A, b, B, c, C...)
+  A mix of uppercase and lowercase letters
+  At least 1 number (1, 2, 3...)
+
+Must no contain:
+  Your name, username, or company name
+  you last 3 passwords
+  Easy-to-guess words
+  Any chracter repeated 3 or more times
 
 
 Fri Oct  7 09:32:59 AKDT 2016
